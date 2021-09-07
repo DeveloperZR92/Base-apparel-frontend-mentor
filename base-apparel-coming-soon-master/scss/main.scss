@@ -1,0 +1,144 @@
+@import "./resets";
+@import "./variables";
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logo {
+  padding-top: 50px;
+}
+.textside {
+  width: 50%;
+  height: 100vh;
+  margin-left: 150px;
+  margin-right: 150px;
+
+  .heading {
+    text-transform: uppercase;
+    line-height: 1.3;
+    letter-spacing: 10px;
+    font-size: 35px;
+    color: $DarkGrayishRed;
+    margin-top: 150px;
+    // grid-area: heading;
+  }
+
+  span {
+    color: $DesaturatedRed;
+  }
+
+  .paragraph {
+    padding-right: 160px;
+    line-height: 1.6;
+    margin-top: 30px;
+    color: $DesaturatedRed;
+    // grid-area: paragraph;
+  }
+
+  .form {
+    margin-top: 50px;
+    // grid-area: form;
+
+    input {
+      width: 430px;
+      height: 50px;
+      border-radius: 50px;
+      padding-left: 30px;
+      opacity: 0.5;
+    }
+
+    button {
+      width: 100px;
+      height: 50px;
+      border-radius: 50px;
+      background-color: $DesaturatedRed;
+      position: absolute;
+      margin-left: -70px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #error-img {
+      position: absolute;
+      margin-left: -100px;
+      padding-top: 12px;
+    }
+    .error-logo {
+      display: none;
+    }
+
+    #error-text {
+      color: $DesaturatedRed;
+    }
+
+    .error-msg {
+      display: none;
+    }
+
+    .ad-email {
+      display: none;
+    }
+
+    #added-email {
+      color: $DesaturatedRed;
+    }
+  }
+}
+
+.photoside {
+  width: 50%;
+  height: 100vh;
+  background-image: url(../images/hero-desktop.jpg);
+  background-size: cover;
+  // grid-area: photoside;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .textside {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    // grid-template-areas: photoside;
+    align-items: center;
+    margin-right: 50px;
+    order: 3;
+
+    .heading {
+      margin-left: 50px;
+    }
+  }
+
+  .photoside {
+    width: 100%;
+    height: 450px !important;
+    background-size: cover;
+    order: 2;
+  }
+
+  .paragraph {
+    width: 450px;
+    padding-right: 30px !important;
+    margin-right: 0 !important;
+    margin-left: 50px;
+  }
+}

@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logo {
+  padding-top: 50px;
+}
+
+.textside {
+  width: 50%;
+  height: 100vh;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.textside .heading {
+  text-transform: uppercase;
+  line-height: 1.3;
+  letter-spacing: 10px;
+  font-size: 35px;
+  color: #413a3a;
+  margin-top: 150px;
+}
+
+.textside span {
+  color: #ce9797;
+}
+
+.textside .paragraph {
+  padding-right: 160px;
+  line-height: 1.6;
+  margin-top: 30px;
+  color: #ce9797;
+}
+
+.textside .form {
+  margin-top: 50px;
+}
+
+.textside .form input {
+  width: 430px;
+  height: 50px;
+  border-radius: 50px;
+  padding-left: 30px;
+  opacity: 0.5;
+}
+
+.textside .form button {
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #ce9797;
+  position: absolute;
+  margin-left: -70px;
+  border: none;
+  cursor: pointer;
+}
+
+.textside .form #error-img {
+  position: absolute;
+  margin-left: -100px;
+  padding-top: 12px;
+}
+
+.textside .form .error-logo {
+  display: none;
+}
+
+.textside .form #error-text {
+  color: #ce9797;
+}
+
+.textside .form .error-msg {
+  display: none;
+}
+
+.textside .form .ad-email {
+  display: none;
+}
+
+.textside .form #added-email {
+  color: #ce9797;
+}
+
+.photoside {
+  width: 50%;
+  height: 100vh;
+  background-image: url(../images/hero-desktop.jpg);
+  background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .textside {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 50px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .textside .heading {
+    margin-left: 50px;
+  }
+  .photoside {
+    width: 100%;
+    height: 450px !important;
+    background-size: cover;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .paragraph {
+    width: 450px;
+    padding-right: 30px !important;
+    margin-right: 0 !important;
+    margin-left: 50px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
